@@ -1,0 +1,387 @@
+device,tid,sid,group,id,address,read_address,address_mpxa,address_mpxd,address_width,address_taw,address_tbb,read_address_mpxa,read_address_mpxd,read_address_width,type,len,factor,offset,unit,signed,min,max,persistent,protect,volatile,since,until,description
+console,0x48,0x58,rev,sw,,0xa3,,,,,,,,,count,,,,,,,,,,,,,
+console,0x48,0x58,rev,sub,,0xad,,,,,,,,,count,,,,,,,,,,,rev.sw count 59,,
+console,0x48,0x58,rev,hw,,0xd0,,,,,,,,,enum,,,,,,,,,,,rev.sw count 46,,
+console,0x48,0x58,sn,pn,0x75 0x76,,,,,,,,,,count,,,,,,,,yes,,,,,
+console,0x48,0x58,sn,location,0x71,,,,,,,,,,string,1,,,,,,,yes,,,,,
+console,0x48,0x58,sn,year,0x72,,,,,,,,,,count,,,,,,,,yes,,,,,
+console,0x48,0x58,sn,month,0x73,,,,,,,,,,count,,,,,,,,yes,,,,,
+console,0x48,0x58,sn,day,0x74,,,,,,,,,,count,,,,,,,,yes,,,,,
+console,0x48,0x58,sn,item,0x77 0x78,,,,,,,,,,count,,,,,,,,yes,,,,,
+console,0x48,0x58,sn,oem,0xbd 0xbe,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 43,,
+console,0x48,0x58,sn,product,0xc1 0xc2,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 43,,
+console,0x48,0x58,sn,type,0xa7,,,,,,,,,,enum,,,,,,,,yes,,,,,"Type of console: 0-EPS, 1-RIDE+, 2-Boost."
+console,0x48,0x58,geometry,circ,0x81 0x82,,,,,,,,,,scalar,,1,,mm,,,,yes,,,,,Circumference of the rear wheel.
+console,0x48,0x58,config,testMode,0xc5,,,,,,,,,,enum,,,,,,,,,,,rev.sw count 56 rev.hw enum 12,rev.hw enum 12,Writing a 1 to this register allows setting the console in test mode to test the LCD and buttons.
+console,0x48,0x58,config,testMode,0xc3,,,,,,,,,,enum,,,,,,,,,,,rev.sw count 56 rev.hw enum 14,rev.hw enum 14,Writing a 1 to this register allows setting the console in test mode to test the LCD and buttons.
+console,0x48,0x58,config,testMode,0xc5,,,,,,,,,,enum,,,,,,,,,,,rev.sw count 56 rev.hw enum 15,,Writing a 1 to this register allows setting the console in test mode to test the LCD and buttons.
+console,0x48,0x58,config,serviceTimestamp,0xd9 0xda,,,,,,,,,,count,,,,,,,,yes,,,rev.sw count 60 rev.hw enum 15,,"Day, in battery-relative value, from which console displays ""service"". 0 to disable the feature."
+console,0x48,0x58,config,serviceDistance,0xdb 0xdc,,,,,,,,,,scalar,,,,km/h,,,,yes,,,rev.sw count 60 rev.hw enum 15,,"Odometer value, from which console displays ""service"". 0 to disable the feature."
+console,0x48,0x58,config,lastMode,0xc7,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 62 rev.hw enum 15,rev.hw enum 15,"Writing 255 will disable the last mode on display power on, 0 will enable the last mode on display power on"
+console,0x48,0x58,config,limitThreshold,0xd5,,,,,,,,,,scalar,,,,,,,,yes,,,rev.sw count 58 rev.hw enum 22,rev.hw enum 22,Boat related
+console,0x48,0x58,config,limitSlope,0xd6,,,,,,,,,,scalar,,,,,,,,yes,,,rev.sw count 58 rev.hw enum 22,rev.hw enum 22,Boat related
+console,0x48,0x58,status,slave,0xd1,,,,,,,,,,enum,,,,,,,,,,yes,rev.sw count 48,,Writing a 1 to this register allows going imemdiatly in slave mode.
+console,0x48,0x58,assist,maxSpeedFlag,0x83,,,,,,,,,,enum,,,,,,0,1,yes,,,,,Indicates that there is an upper speed limit where the motor is allowed to assist.
+console,0x48,0x58,assist,maxSpeed,0x84 0x85,,,,,,,,,,scalar,,0.1,,km/h,,,,yes,,,,,Maximum speed for which the motor can assist. This is irrelevant if maxSpeedFlag is not set.
+console,0x48,0x58,assist,minSpeedFlag,0x89,,,,,,,,,,enum,,,,,,0,1,yes,,,,,
+console,0x48,0x58,assist,minSpeed,0x8a,,,,,,,,,,scalar,,0.1,,km/h,,,,yes,,,,,
+console,0x48,0x58,assist,brakeLevel,0x8b,,,,,,,,,,scalar,,1.5625,,%,,0,64,yes,,,,,
+console,0x48,0x58,assist,brakeFlag,0xa0,,,,,,,,,,enum,,,,,,0,1,yes,,,,,
+console,0x48,0x58,assist,autoregenFlag,0xab,,,,,,,,,,enum,,,,,,0,1,yes,,,rev.sw count 50,,
+console,0x48,0x58,assist,brakePolarity,0xa1,,,,,,,,,,enum,,,,,,0,3,yes,,,,,
+console,0x48,0x58,assist,gaugeFilter,0xa2,,,,,,,,,,enum,,,,,,1,5,yes,,,,,
+console,0x48,0x58,assist,gaugeGain,0xa4,,,,,,,,,,scalar,,0.1,,,,,,yes,,,,,
+console,0x48,0x58,assist,gainA,0xa5,,,,,,,,,,scalar,,0.1,,,,,,yes,,,,,
+console,0x48,0x58,assist,gainB,0xa6,,,,,,,,,,scalar,,0.1,,,,,,yes,,,,,
+console,0x48,0x58,assist,gaugeJoint,0x7a,,,,,,,,,,scalar,,,,,,0,11,,,,rev.sw count 39,,
+console,0x48,0x58,assist,level1,0xb0,,,,,,,,,,scalar,,1.5625,,%,,0,1,yes,,,rev.sw count 42,,
+console,0x48,0x58,assist,level2,0xb1,,,,,,,,,,scalar,,1.5625,,%,,0,1,yes,,,rev.sw count 42,,
+console,0x48,0x58,assist,level3,0xb2,,,,,,,,,,scalar,,1.5625,,%,,0,1,yes,,,rev.sw count 42,,
+console,0x48,0x58,assist,level4,0xb3,,,,,,,,,,scalar,,1.5625,,%,,0,1,yes,,,rev.sw count 42,,
+console,0x48,0x58,assist,levelR1,0xde,,,,,,,,,,scalar,,1.5625,,%,,0,1,,,,rev.sw count 60,,
+console,0x48,0x58,assist,levelR2,0xdf,,,,,,,,,,scalar,,1.5625,,%,,0,1,,,,rev.sw count 60,,
+console,0x48,0x58,assist,levelR3,0xd7,,,,,,,,,,scalar,,1.5625,,%,,0,1,,,,rev.sw count 60,,
+console,0x48,0x58,assist,levelR4,0xd8,,,,,,,,,,scalar,,1.5625,,%,,0,1,,,,rev.sw count 60,,
+console,0x48,0x58,assist,initLevel,0xb4,,,,,,,,,,enum,,,,,,0,4,yes,,,rev.sw count 42,,
+console,0x48,0x58,assist,regenEnabled,0xac,,,,,,,,,,enum,,,,,,,,,,yes,rev.sw count 55,,
+console,0x48,0x58,assist,mountainCap,0xc6,,,,,,,,,,scalar,,1.5625,,%,,0,100,,,,rev.sw count 59,,Maximum set point to send to motor when in mountain mode. 0-Disabled
+console,0x48,0x58,throttle,maxSpeedFlag,0x86,,,,,,,,,,enum,,,,,,0,1,yes,,,,,
+console,0x48,0x58,throttle,maxSpeed,0x87 0x88,,,,,,,,,,scalar,,0.1,,km/h,,,,yes,,,,,
+console,0x48,0x58,throttle,enabledOnStrain,0x8e,,,,,,,,,,enum,,,,,,0,1,yes,,,,,Allow throttle over maxSpeed if strain gauge signal detected.
+console,0x48,0x58,throttle,enableBoostDisplay,0xaa,,,,,,,,,,enum,,,,,,0,1,yes,,,rev.sw count 54 rev.hw enum 15,,"Display the ""boost"" message or pictogram when it activates."
+console,0x48,0x58,throttle,boostTriggerLevel,0xc3,,,,,,,,,,scalar,,1.5625,,%,,1.5,50,,,,rev.sw count 46 rev.hw enum 15,rev.hw enum 16,"Display the ""boost"" message or pictogram when it activates."
+console,0x48,0x58,throttle,calibrated,0x6c,,,,,,,,,,enum,,,,,,0,1,yes,,,,,
+console,0x48,0x58,throttle,position,0xd4,,,,,,,,,,scalar,,1.5625,,,,,,,,yes,rev.sw count 39,,
+console,0x48,0x58,throttle,raw,0xd2 0xd3,,,,,,,,,,scalar,,,,,,,,,,yes,rev.sw count 39,,
+console,0x48,0x58,throttle,min,0x7b 0x7c,,,,,,,,,,scalar,,,,,,,,yes,,,rev.sw count 39,,
+console,0x48,0x58,throttle,max,0x7d 0x7e,,,,,,,,,,scalar,,,,,,,,yes,,,rev.sw count 39,,
+console,0x48,0x58,preference,tripToEmptyFlag,0x8c,,,,,,,,,,enum,,,,,,0,1,yes,,,,,
+console,0x48,0x58,preference,displayUnits,0x8d,,,,,,,,,,enum,,,,,,0,1,yes,,,,,"Indicates unit system to use when displaying units. 0-English, 1-Metric."
+console,0x48,0x58,preference,nip,0x68 0x69 0x6a 0x6b,,,,,,,,,,string,,,,,,,,yes,,,,,
+console,0x48,0x58,preference,lcdContrast,0x70,,,,,,,,,,scalar,,,,,,0,,yes,,,,,
+console,0x48,0x58,preference,codes,0xb8 0xb7 0xb6 0xb5,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 42,,"0-(3771, 2005)Wheel circumference, 1-(3772)Diagnostic mode, 2-(3773)Max speed, 3-(3774)Overvoltage protection, 4-(3775)Max throttle speed, 5-(3776)Minimum assist speed, 6-(1976)Motor direction, 7-(5000)Deprecated, 8-(2001)metric vs imperial, 9-(2002)Regen value, 10-(2003)Remaining distance, 11-(2004)Clock time, 12-(2006)Brake switch config, 13-(2007)Throttle polarity, 14-(2008)Accessory voltage, 15-(0041)Slave console, 16-(1234)Filter, 17-(1970)Light sensor, 18-(0007)Gauge gain, 19-(0008)Assistance gain, 20-(0009)Gauge joint, 21-(0911)Deprecated, 22-(0001)Console info, 23-(0002)Battery info, 24-(0003)Motor info, 25-(6000)Battery statistics, 26-(0006)Speed gain, 27-Alarm, 28-Time."
+console,0x48,0x58,preference,codesRw,0xbc 0xbb 0xba 0xb9,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 42,,Same bit as console.preference.codes except for: 28-Mountain mode.
+console,0x48,0x58,preference,region,0xa8,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 40,,
+console,0x48,0x58,preference,configBit0,0xa9,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 40,,
+console,0x48,0x58,preference,flipSide,0xc4,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 45 sn.pn count 3205,rev.sw count 45 sn.pn count 3205,"Indicates on what side of the handlebar is located the console. 0-Right, 1-Left."
+console,0x48,0x58,preference,flipSide,0xc4,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 46 rev.hw enum 15,rev.hw enum 15,"Indicates on what side of the handlebar is located the console. 0-Right, 1-Left."
+console,0x48,0x58,preference,lightButtonMode,0xae,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 59 rev.hw enum 15,rev.hw enum 15,"Indicate the operation of console button ""light/power"". 0-Click turns bike off, hold toggles accessory; 1-Click toggle accessory, hold turns bike off."
+console,0x48,0x58,preference,lightOnAtStart,0x80,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 59 rev.hw enum 15,rev.hw enum 15,"Indicate if the accessory shall be enabled when turning the bike on. 0-No, 1-Yes."
+console,0x48,0x58,preference,language,0xd5 0xd6,,,,,,,,,,string,2,,,,,,,yes,,,rev.sw count 58 rev.hw enum 27,rev.hw enum 27,
+console,0x48,0x58,preference,expertMode,0xaf,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 62 rev.hw enum 15,rev.hw enum 15,Add new display mode for expert mode
+console,0x48,0x58,preference,throttleMode,0xbf,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 62 rev.hw enum 15 rev.sub count 3,rev.hw enum 15,Configure the throttle for the menu change mode
+console,0x48,0x58,stats,odo,0x67 0x66 0x65 0x64,0x64 0x65 0x66 0x67,,,,,0.02,,,,scalar,,0.1,,km,,,,yes,,,,,
+console,0x48,0x58,stats,chronoHr,0x6f,,,,,,,,,,count,,,,h,,,,,,,,,
+console,0x48,0x58,stats,chronoMin,0x6e,,,,,,,,,,count,,,,min,,,,,,,,,
+console,0x48,0x58,stats,chronoSec,0x6d,,,,,,,,,,count,,,,s,,,,,,,,,
+console,0x48,0x58,stats,trip,,0x50 0x51,,,,,,,,,scalar,,0.1,,km,,,,,,,rev.sw count 39,,
+console,0x48,0x58,stats,avgSpeed,0x52 0x53,,,,,,,,,,scalar,,0.1,,km/h,,,,,,,rev.sw count 39,,
+battery,0x50,0x58,rev,sw,,0x3c,,,,,,,,,count,,,,,,,,,,,,,
+battery,0x50,0x58,rev,hw,,0x3b,,,,,,,,,enum,,,,,,,,,,,,,
+battery,0x50,0x58,rev,sub,,0x18,,,,,,,,,count,,,,,,,,,,,,,
+battery,0x50,0x58,rev,charger,,0x56,,,,,,bridges.chargerAddr,bridges.chargerData,,count,,,,,,,,,,,rev.sw count 91 rev.hw enum 60,,
+battery,0x50,0x58,rev,supervisor,,0xa200,,,,,,bridges.i2cRegAddr,bridges.i2cRegData,,count,,,,,,,,,,,rev.sw count 91 rev.hw enum 60,,
+battery,0x50,0x58,rev,bom,,0x41,,,,,,,,,enum,,,,,,,,,,,rev.sw count 107 rev.hw enum 60,,Identification of printed circuit board bill of material version. 1: All smc6.2 and SMC#6.3r1. 8: SMC#6.3r4 .
+battery,0x50,0x58,sn,cellPack,0x6a 0x6b,,,,,,,,,,count,,,,,,,,,,,rev.hw enum 60 rev.sw count 108,,
+battery,0x50,0x58,sn,pn,0x75 0x76,,,,,,,,,,count,,,,,,,,yes,1,,,rev.hw count 52,
+battery,0x50,0x58,sn,location,0x5b,,,,,,,,,,string,1,,,,,,,yes,,,,rev.hw count 52,
+battery,0x50,0x58,sn,year,0x72,,,,,,,,,,count,,,,,,,,yes,1,,,rev.hw count 52,
+battery,0x50,0x58,sn,month,0x73,,,,,,,,,,count,,,,,,,,yes,1,,,rev.hw count 52,
+battery,0x50,0x58,sn,day,0x74,,,,,,,,,,count,,,,,,,,yes,1,,,rev.hw count 52,
+battery,0x50,0x58,sn,item,0x77 0x78,,,,,,,,,,count,,,,,,,,yes,1,,,rev.hw count 52,
+battery,0x50,0x58,sn,pn,0x75 0x76,,,,,,,,,,count,,,,,,,,,,,rev.hw count 60,,
+battery,0x50,0x58,sn,location,0x5b,,,,,,,,,,string,1,,,,,,,,,,rev.hw count 60,,
+battery,0x50,0x58,sn,year,0x72,,,,,,,,,,count,,,,,,,,,1,,rev.hw count 60,,
+battery,0x50,0x58,sn,month,0x73,,,,,,,,,,count,,,,,,,,,1,,rev.hw count 60,,
+battery,0x50,0x58,sn,day,0x74,,,,,,,,,,count,,,,,,,,,1,,rev.hw count 60,,
+battery,0x50,0x58,sn,item,0x77 0x78,,,,,,,,,,count,,,,,,,,,1,,rev.hw count 60,,
+battery,0x50,0x58,pcbSn,pn,0xa09c 0xa09d,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,,rev.hw count 60,,
+battery,0x50,0x58,pcbSn,location,0xa0a0,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,string,1,,,,,,,,,,rev.hw count 60,,
+battery,0x50,0x58,pcbSn,year,0xa099,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,1,,rev.hw count 60,,
+battery,0x50,0x58,pcbSn,month,0xa09a,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,1,,rev.hw count 60,,
+battery,0x50,0x58,pcbSn,day,0xa09b,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,1,,rev.hw count 60,,
+battery,0x50,0x58,pcbSn,item,0xa09e 0xa09f,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,1,,rev.hw count 60,,
+battery,0x50,0x58,timer,power,0x51 0x52,,,,,,,,,,scalar,,,,s,,,,,,,rev.sw count 75,,Time before the power output shuts down.
+battery,0x50,0x58,timer,accessory,0x53 0x54,,,,,,,,,,scalar,,,,s,,,,,,,rev.sw count 75,,Time before the accessory voltage shuts down.
+battery,0x50,0x58,timer,preCharge,0x55,,,,,,,,,,scalar,,,,s,,,,,,,rev.sw count 75,,"Time allowed to precharge the motor, before enabling full power."
+battery,0x50,0x58,timer,masterShutdown,0x56 0x57,,,,,,,,,,scalar,,0.5,,,,,,,,,,rev.sw count 75,
+battery,0x50,0x58,timer,masterShutdown,0x56 0x57,,,,,,,,,,scalar,,,,,,,,,,,rev.sw count 76,,
+battery,0x50,0x58,status,v5V,,203,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.sw count 108 rev.hw enum 60,,Internal voltage of the 5(5.5)V derived from the internal 12V.
+battery,0x50,0x58,status,v3V3,,202,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.sw count 108 rev.hw enum 60,,Internal voltage of the 3.3V derived from the internal 5V.
+battery,0x50,0x58,status,vPackId,,201,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.sw count 108 rev.hw enum 60,,Raw voltage of the resistor divider used to identify the cell pack.
+battery,0x50,0x58,status,vBomId,,200,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.sw count 108 rev.hw enum 60,,Raw voltage of the resistor divider used to identify the revision of the BOM.
+battery,0x50,0x58,status,flags,,0xf0,,,,,,,,,enum,,,,,,,,,,yes,,rev.hw count 52,
+battery,0x50,0x58,status,flags,,0x1d 0xf0,,,,,,,,,enum,,,,,,,,,,yes,rev.hw count 60,,"Alert status bits: 0-Vctrl (code 20), 1-Precharge (code 21 and 67), 2-Relay (code 22), 3-BMS (code 23), 4-DCDC (code 28), 6-GG out of range temperature, 7-battery pack out of range temperature, 8-balancer overvolt (code 62), 9-Balancer undervolt (code 61), 10-Pack problem (code 63), 11-Accessory overcurrent (code 60), 12-Electronic fuse (code 66), 13-Balancer plug not connected, 14- +5v short(lached)"
+battery,0x50,0x58,status,testFlags,0xa0fd 0xa0fe,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,,rev.hw enum 60,,Gives battery test information (see /wiki/EepromForTester)
+battery,0x50,0x58,status,permanentFailureFlags,0xa0a1,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,,rev.hw enum 60,,Having this register set to an non-0xFF or non-zero value indicates this battery shouldn't be used (see /wiki/EepromForTester)
+battery,0x50,0x58,status,chargerManagerStatus,,0x13,,,,,,,,,count,,,,,,,,,,yes,rev.sw count 102 rev.hw enum 60,,"Gives state of charging Mef: 0-Off, 1-Stand-by, 2-Charger, 3-Accessory, 4-Vdcin sense, 5-Overtemp, 6-Charge done, 7-Buck failed"
+battery,0x50,0x58,status,vBattNorm,,0x32,,,,,,,,,scalar,,0.416667,20.8333,%,,,,,,yes,,,Battery voltage normalized with 3.7V/cell. status.vBattInternal it used in Rev 104 and less otherwise status.vBatt.
+battery,0x50,0x58,status,vBattInternal,,0x4a 0x4b,,,,,,,,,scalar,,0.001,,V,,,,,,yes,,,Reading of vBattInternal
+battery,0x50,0x58,status,vBattAvgNorm,,0x33,,,,,,,,,scalar,,0.416667,20.8333,%,,,,,,yes,,,
+battery,0x50,0x58,status,vBatt,,0xa6 0xa7,,,,,,,,,scalar,,0.001,,V,,,,,,yes,,,Reading of vBatt. Return same value as vCell13
+battery,0x50,0x58,status,vPower,,0xaa 0xab,,,,,,,,,scalar,,0.001,,V,,,,,,yes,,,"Reading of vPower (""High"" voltage applied to motor)"
+battery,0x50,0x58,status,vControl,,0xac 0xad,,,,,,,,,scalar,,0.001,,V,,,,,,yes,,,Reading of vControl (Control voltage applied to motor)
+battery,0x50,0x58,status,vConsole,,0x4c 0x4d,,,,,,,,,scalar,,0.001,,V,,,,,,yes,,,Reading of vConsole (voltage applied to console)
+battery,0x50,0x58,status,v12V,,0x4e 0x4f,,,,,,,,,scalar,,0.001,,V,,,,,,yes,,,Reading of internal 12V
+battery,0x50,0x58,status,vAccessory,,0x5e 0x5f,,,,,,,,,scalar,,0.001,,V,,,,,,yes,,,Reading of vAccessory
+battery,0x50,0x58,status,vDcIn,,0x9a 0x9b,,,,,,,,,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,Reading of external power supply voltage
+battery,0x50,0x58,status,iCellPack,,0x1e 0x1f,,,,,,,,,scalar,,0.001,,A,yes,,,,,yes,rev.hw count 60,,"Reading battery current by a shunt resistor. No delay, no calibration compared to battery.gg.ai"
+battery,0x50,0x58,status,level,,0x61,,,,,,,,,scalar,,6.6667,,%,,,,,,yes,,,
+battery,0x50,0x58,status,leds,0x87,,,,,0.5,,,,,enum,,,,,,,,,,yes,,,
+battery,0x50,0x58,status,vChannel01,,0x01,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vChannel02,,0x02,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vChannel03,,0x03,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vChannel04,,0x04,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vChannel05,,0x05,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vChannel06,,0x06,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vChannel07,,0x07,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vChannel08,,0x08,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vChannel09,,0x09,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vChannel10,,0x0a,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vChannel11,,0x0b,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vChannel12,,0x0c,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vChannel13,,0x0d,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,vCell01,,0x81,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,vCell02,,0x82,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,vCell03,,0x83,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,vCell04,,0x84,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,vCell05,,0x85,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,vCell06,,0x86,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,vCell07,,0x87,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,vCell08,,0x88,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,vCell09,,0x89,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,vCell10,,0x8a,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,vCell11,,0x8b,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,vCell12,,0x8c,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,vCell13,,0x8d,,,,,,cellMon._channelAddr,cellMon._channelData,16,scalar,,0.001,,V,yes,,,,,yes,rev.sw count 96 rev.hw enum 60,,
+battery,0x50,0x58,status,packTemperature1,,0x66,,,,,,,,,scalar,,,,C,yes,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,packTemperature2,,0x67,,,,,,,,,scalar,,,,C,yes,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,packTemperature3,,0x68,,,,,,,,,scalar,,,,C,yes,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,packTemperature4,,0x69,,,,,,,,,scalar,,,,C,yes,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,status,capsense,0xa204 0xa203,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,yes,rev.sw count 92 rev.hw enum 60,,.
+battery,0x50,0x58,status,capsenseReference,0xa206 0xa205,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,yes,rev.sw count 92 rev.hw enum 60,,.
+battery,0x50,0x58,status,estimatedSoc,,0x30,,,,,,,,,scalar,,,,%,,,,,,yes,,,Return an estimated value of SOC based on battery voltage. Only works with LiIon battery.
+battery,0x50,0x58,status,_powerOnResetCount,,0x7D,,,,,,,,,count,,,,,,,,,,yes,rev.sw count 95,,Return how many time main microcontroller hardly reset.
+battery,0x50,0x58,status,_watchDogResetCount,,0x9F,,,,,,,,,count,,,,,,,,,,yes,rev.sw count 95,,Return how many time watchdog reset trigged.
+battery,0x50,0x58,cellMon,_channelAddr,0x6c,,,,,,,,,,count,,,,,,,,,,,rev.hw enum 60,,
+battery,0x50,0x58,cellMon,_channelData,,0x6d 0x6e,,,,,,,,,count,,,,,,,,,,yes,rev.hw enum 60,,
+battery,0x50,0x58,cellMon,_calibrationData,0x6f,,,,,,,,,,count,,,,,,,,,1,yes,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,cellMon,_calibrationData,0x7c 0x6f,,,,,,,,,,count,,,,,,,,,1,yes,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,cellMon,balancerEnabled,0x65,,,,,,,,,,enum,,,,,,,,,1,yes,rev.hw enum 60,,
+battery,0x50,0x58,charger,current,0x14 0x15,,bridges.chargerAddr,bridges.chargerData,,,,,,,scalar,,0.001,,,,,,,,yes,rev.sw count 92 rev.hw enum 60,,Set charge current
+battery,0x50,0x58,charger,_currentCalibration,,0x46 0x47,,,,,,bridges.chargerAddr,bridges.chargerData,,enum,,,,,,,,,,yes,rev.hw enum 60,,Multiplier applied on charger current reading for its calibration
+battery,0x50,0x58,charger,finalVoltage,0x12 0x13,,bridges.chargerAddr,bridges.chargerData,,,,,,,scalar,,0.01,,,,,,,,yes,rev.sw count 92 rev.hw enum 60,,Set final charge voltage
+battery,0x50,0x58,charger,mode,0x10,,bridges.chargerAddr,bridges.chargerData,,,,,,,enum,,,,,,,,,,yes,rev.sw count 91 rev.hw enum 60,,"Indicates the mode of the on-board charger. 0-Low power, 1-Idle, 2-Charging, 3-Accessory output, 5-Calibration, 99-Fault."
+battery,0x50,0x58,charger,statusFlags,,0x02 0x03,,,,,,bridges.chargerAddr,bridges.chargerData,,count,,,,,,,,,,yes,rev.sw count 92 rev.hw enum 60,,.
+battery,0x50,0x58,charger,_voltageCalibration,,0x42 0x43,,,,,,bridges.chargerAddr,bridges.chargerData,,enum,,,,,,,,,,yes,rev.hw enum 60,,Multiplier applied on charger voltage reading for its calibration
+battery,0x50,0x58,bridges,i2cRegAddr,0x58 0x70,,,,,,,,,,count,,,,,,,,,,,rev.hw enum 60,,Indicates the address of the I2C device we want to address (high part) and the register within this I2C device (lower part) to accessed when accessing i2cData.
+battery,0x50,0x58,bridges,i2cRegData,0x60,,,,,,,,,,count,,,,,,,,,1,yes,rev.hw enum 60,,
+battery,0x50,0x58,bridges,chargerAddr,0x85,,,,,,,,,,count,,,,,,,,,1,,rev.hw enum 60,,
+battery,0x50,0x58,bridges,chargerData,0x86,,,,,,,,,,count,,,,,,,,,1,yes,rev.hw enum 60,,
+battery,0x50,0x58,calib,capsense,0xa030,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,scalar,,-0.2,12,,,,,,,,rev.sw count 92 rev.hw enum 60,,"Sensitivity of the capsensing detection. 1 is less sensitive, 10 is most sensitive."
+battery,0x50,0x58,calib,calibration01,0x01,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration02,0x02,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration03,0x03,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration04,0x04,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration05,0x05,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration06,0x06,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration07,0x07,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration08,0x08,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration09,0x09,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration10,0x0a,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration11,0x0b,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration12,0x0c,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration13,0x0d,,cellMon._channelAddr,cellMon._calibrationData,,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60,rev.sw count 102,
+battery,0x50,0x58,calib,calibration01,0x01,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration02,0x02,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration03,0x03,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration04,0x04,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration05,0x05,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration06,0x06,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration07,0x07,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration08,0x08,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration09,0x09,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration10,0x0a,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration11,0x0b,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration12,0x0c,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration13,0x0d,,cellMon._channelAddr,cellMon._calibrationData,16,,,,,,scalar,,0.03,,%,yes,,,,,,rev.hw enum 60 rev.sw count 103,,
+battery,0x50,0x58,calib,calibration3V3,0xa01c 0xa01d,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,scalar,,0.001,,,,,,,,,rev.hw enum 60,,SMC6 ADC reference calibration (nominal value = 3V3)
+battery,0x50,0x58,stats,v5VShorts,0xa059 0xa05a,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,yes,rev.sw count 108 rev.hw enum 60,,Number of times the internal 5.5V has been shorted.
+battery,0x50,0x58,stats,vControlShorts,0xa057 0xa058,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,yes,rev.sw count 108 rev.hw enum 60,,Number of times the vControl has been shorted.
+battery,0x50,0x58,stats,lowBattBuzzCount,0xa03a 0xa03b,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,yes,rev.sw count 103 rev.hw enum 60,,Number of times the buzzer did emit a sound because of a low battery.
+battery,0x50,0x58,stats,cellVoltageCollapseCount,0xa04e 0xa04f,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,yes,rev.sw count 103 rev.hw enum 60,,Number of times the charging process detected a cell for which the voltage collapsed.
+battery,0x50,0x58,stats,cellPartialShortCount,0xa04c 0xa04d,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,yes,rev.sw count 103 rev.hw enum 60,,Number of times the charging process detected a cell that is partially short.
+battery,0x50,0x58,stats,cellDeadShortCount,0xa04a 0xa04b,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,yes,rev.sw count 103 rev.hw enum 60,,Number of times the charging process detected a cell that is dead short.
+battery,0x50,0x58,stats,deepSleepAfterLongInactivityPeriodCount,0xa05d 0xa05e,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,yes,rev.sw count 108 rev.hw enum 60,,Number of times the battery entered deep sleep after X days of inactivity (specified in battery.config.deepSleepAfterLongInactivityPeriodDelay).
+battery,0x50,0x58,stats,deepSleepAfterLowSocCount,0xa05f 0xa060,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,yes,rev.sw count 108 rev.hw enum 60,,Number of times the battery entered deep sleep due to SOC less than 10% during X days (specified in battery.config.deepSleepLowSocDelay).
+battery,0x50,0x58,stats,deepSleepExtremeLowBatteryVoltageCount,0xa08f 0xa090,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,yes,rev.sw count 108 rev.hw enum 60,,Number of times the battery entered deep sleep due to an average voltage under 2.54V/cell.
+battery,0x50,0x58,stats,dischargeEnergy,0xa06b 0xa06c 0xa06d 0xa06e,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,scalar,,,,Wh,,,,,,yes,rev.sw count 108 rev.hw enum 60,,Total energy delivered by the battery over its life.
+battery,0x50,0x58,stats,chargeEnergy,0xa067 0xa068 0xa069 0xa06a,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,scalar,,,,Wh,,,,,,yes,rev.sw count 108 rev.hw enum 60,,Total energy stored in the battery over its life.
+battery,0x50,0x58,stats,lmd,,0xd5 0xd6,,,,,,,,,scalar,,0.002142,,Ah,,,,,,yes,,,
+battery,0x50,0x58,stats,reset,0x48 0x49,,,,,,,,,,count,,,,,,,,yes,,yes,,,
+battery,0x50,0x58,stats,vControlShorts,0x9e,,,,,,,,,,count,,,,,,,,yes,,yes,,rev.hw enum 52,
+battery,0x50,0x58,stats,ggjrCalib,0xec,,,,,,,,,,count,,,,,,,,yes,,yes,,,
+battery,0x50,0x58,stats,resetWdt,0x9f,,,,,,,,,,count,,,,,,,,yes,,yes,,,
+battery,0x50,0x58,stats,rtcResync,0x90,,,,,,,,,,count,,,,,,,,yes,,yes,,,
+battery,0x50,0x58,stats,chargeTimeWorst,0x8c 0x8d,,,,,,,,,,scalar,,,,,,,,yes,,yes,,,
+battery,0x50,0x58,stats,chargeTimeMean,0x8a 0x8b,,,,,,,,,,scalar,,,,,,,,yes,,yes,,,
+battery,0x50,0x58,stats,lmdAdapt,0x91,,,,,,,,,,count,,,,,,,,yes,,yes,,,
+battery,0x50,0x58,stats,battCycles,0x8e 0x8f,,,,,,,,,,count,,,,,,,,yes,1,yes,,,
+battery,0x50,0x58,stats,battFullCycles,0x92 0x93,,,,,,,,,,count,,,,,,,,yes,,yes,,,
+battery,0x50,0x58,stats,powerCycles,0x96 0x97,,,,,,,,,,count,,,,,,,,yes,1,yes,,,
+battery,0x50,0x58,stats,vbattMax,0x98,,,,,,,,,,scalar,,0.416667,20.8333,%,,,,yes,,,,,"Maximum voltage ever seen by the battery, in percentage of its nominal voltage."
+battery,0x50,0x58,stats,vbattMin,0x99,,,,,,,,,,scalar,,0.416667,20.8333,%,,,,yes,,,,,"Minimum voltage ever seen by the battery, in percentage of its nominal voltage."
+battery,0x50,0x58,stats,vbattMean,,0x33,,,,,,,,,scalar,,0.416667,20.8333,%,,,,,,,,,"Average battery voltage read during 50s based on battery.status.vBatt, in percentage of its nominal voltage."
+battery,0x50,0x58,stats,tbattMax,0x9c,,,,,,,,,,scalar,,,,,yes,,,yes,,,,,
+battery,0x50,0x58,stats,tbattMin,0x9d,,,,,,,,,,scalar,,,,,yes,,,yes,,,,,
+battery,0x50,0x58,stats,chargeAddr,0xf6,,,,,,,,,,count,,,,,,,,,,,rev.sw count 78,,"Indicates which charge statistic should be accessed when accessing chargeData. Value can be any value between 1 and 9, 1 being for 10% stat and 9 for 90% stat."
+battery,0x50,0x58,stats,chargeData,0xf7 0xf8,,,,,,,,,,count,,,,,,,,,1,yes,rev.sw count 78,,
+battery,0x50,0x58,stats,charge10,0x01,,stats.chargeAddr,stats.chargeData,16,,,,,,count,,,,,,,,yes,,yes,rev.sw count 78,,
+battery,0x50,0x58,stats,charge20,0x02,,stats.chargeAddr,stats.chargeData,16,,,,,,count,,,,,,,,yes,,yes,rev.sw count 78,,
+battery,0x50,0x58,stats,charge30,0x03,,stats.chargeAddr,stats.chargeData,16,,,,,,count,,,,,,,,yes,,yes,rev.sw count 78,,
+battery,0x50,0x58,stats,charge40,0x04,,stats.chargeAddr,stats.chargeData,16,,,,,,count,,,,,,,,yes,,yes,rev.sw count 78,,
+battery,0x50,0x58,stats,charge50,0x05,,stats.chargeAddr,stats.chargeData,16,,,,,,count,,,,,,,,yes,,yes,rev.sw count 78,,
+battery,0x50,0x58,stats,charge60,0x06,,stats.chargeAddr,stats.chargeData,16,,,,,,count,,,,,,,,yes,,yes,rev.sw count 78,,
+battery,0x50,0x58,stats,charge70,0x07,,stats.chargeAddr,stats.chargeData,16,,,,,,count,,,,,,,,yes,,yes,rev.sw count 78,,
+battery,0x50,0x58,stats,charge80,0x08,,stats.chargeAddr,stats.chargeData,16,,,,,,count,,,,,,,,yes,,yes,rev.sw count 78,,
+battery,0x50,0x58,stats,charge90,0x09,,stats.chargeAddr,stats.chargeData,16,,,,,,count,,,,,,,,yes,,yes,rev.sw count 78,,
+battery,0x50,0x58,rtc,time,0xa1 0xa2 0xa3 0xa4,,,,,,,,,,count,,,,,,,,,1,yes,,,Indicates current battery time in seconds. Its value is normally relative to assembly time.
+battery,0x50,0x58,rtc,lastChargeTimeStamp,0xf2 0xf3 0xf4 0xf5,,,,,,,,,,count,,,,,,,,yes,1,yes,rev.sw count 77,,"Written on boot-up and shutdown, this register indicates when last minimum 10% charge was completed."
+battery,0x50,0x58,rtc,lastValidTimeStamp,,0x19 0x1a 0x1b 0x1c,,,,,,,,,count,,,,,,,,,,yes,rev.sw count 77,,Indicates last valid battery time. This read-only register is set to rtc.time when written and then refresh each 34 minutes.
+battery,0x50,0x58,rtc,ctrl,0xa0,,,,,,,,,,count,,,,,,,,,1,,,,
+battery,0x50,0x58,rtc,status,,0xa5,,,,,,,,,enum,,,,,,,,,,,,,"Describes the status of the RTC: 0-in sync, 1-Write ok, 2-Read ok, 3-Update time, 4-Update ctrl, 5-Osc ok, 7-RTC detected."
+battery,0x50,0x58,gg,ai,,0xd3 0xd4,,,,,,,,,scalar,,0.002142,,A,,,,,,yes,,,
+battery,0x50,0x58,gg,voltage,,0xdf 0xe0,,,,,,,,,scalar,,0.008,,V,,,,,,yes,,,
+battery,0x50,0x58,gg,soc,,0xbc,,,,,,,,,scalar,,,,%,,,,,,yes,,,
+battery,0x50,0x58,gg,lmd,,0xd5 0xd6,,,,,,,,,count,,,,,,,,,,yes,,,
+battery,0x50,0x58,gg,flags,,0xde,,,,,,,,,enum,,,,,,,,,,yes,,,
+battery,0x50,0x58,gg,status,,0xde,,,,,,,,,enum,,,,,,,,,,,,,
+battery,0x50,0x58,gg,temperature,,0xe1 0xe2,,,,,,,,,scalar,,0.25,-273,C,,,,,,yes,,,
+battery,0x50,0x58,gg,dmfsd,0xb5,,,,,,,,,,count,,,,,,,,,,yes,,,Digital Magnitude Filter and Self Discharge rate
+battery,0x50,0x58,gg,voltageDivider,0xed,,,,,,,,,,scalar,,0.1,,,,,,,,yes,,,"Gas gage external divider value. Indicates how the voltage is divided before reaching the GG. For example, if the battery voltage is 30V and this register is 10, the GG will have 3V at its input."
+battery,0x50,0x58,config,maxPackTemperature,0xa055,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,scalar,,,,C,yes,35,90,,,,rev.sw count 108 rev.hw enum 60,,Temperature of the cell pack over which the power gets interrupted. 255 means 60.
+battery,0x50,0x58,config,minPackTemperature,0xa054,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,scalar,,,,C,yes,-40,0,,,,rev.sw count 108 rev.hw enum 60,,Temperature of the cell pack under which the power gets interrupted. 255 means -30.
+battery,0x50,0x58,config,maxGgTemperature,0xa053,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,scalar,,,,C,yes,35,100,,,,rev.sw count 108 rev.hw enum 60,,Temperature of the gaz gauge (board) over which the power gets interrupted. 255 means 85.
+battery,0x50,0x58,config,minGgTemperature,0xa052,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,scalar,,,,C,yes,-40,0,yes,,,rev.sw count 108 rev.hw enum 60,,Temperature of the gaz gauge (board) under which the power gets interrupted. 255 means -30.
+battery,0x50,0x58,config,maxCellDeltaVoltage,0xa038,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,scalar,,0.001,,V,,25,250,yes,,,rev.sw count 103 rev.hw enum 60,,"Delta voltage, between the lowest and the highest cell in the pack, over which the balancer is activated. 0.255 means 0.125."
+battery,0x50,0x58,config,tailLampIntensity,0x43,,,,,,,,,,scalar,,,,%,,,,,,,rev.sw count 100 rev.hw enum 60,,Controls the intensity of the tail Lamp. 0: OFF. 1-100%: On.
+battery,0x50,0x58,config,shipMode,0x37,,,,,,,,,,enum,,,,,,,,,1,,rev.sw count 106 rev.hw enum 60,,"Determines if the battery is to go in ship mode (only external power can wake it) upon its next shutdown. We need to first write 0xaa and then the desired value to set the value. 0-Normal mode, 1-Ship mode"
+battery,0x50,0x58,config,deepSleepAfterLongInactivityPeriodDelay,0xa05b,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,scalar,,,,days,,,,,,,rev.sw count 108 rev.hw enum 60,,Number of days the battery entered deep sleep after inactivity (Default = 60)
+battery,0x50,0x58,config,deepSleepLowSocDelay,0xa05c,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,scalar,,,,days,,,,,,,rev.sw count 108 rev.hw enum 60,,Number of days after which the battery automatically goes in deep sleep when its Soc is low (Default = 7).
+battery,0x50,0x58,config,commMode,0x2a,,,,,,,,,,enum,,,,,,,,,1,,,,"Determines how the battery communicates. To change the value, we must first write 0xaa to this register and then write 1 to switch to I2C or 2 to switch to CAN."
+battery,0x50,0x58,config,autoSwitchComm,0x7e,,,,,,,,,,enum,,,,,,,,,1,,,,"Allow to switch communication mode without shutdown. Write 0xAA, then 0x01. Comm. mode switches. Communicate with desired comm. mode before 5s (100ms min) to validate. Write 0 to desactivate."
+battery,0x50,0x58,config,wakeOnPowerVoltage,0x14,,,,,,,,,,scalar,,,,V,,,,yes,1,,rev.sw count 96,,Specifies if the battery should wake up automatically when a voltage is present on the vPower. A value of 0 disables the feature.
+battery,0x50,0x58,config,allowBuckChargingOnBike,0x12,,,,,,,,,,enum,,,,,,,,,1,,rev.sw count 103 rev.hw enum 60,,"Specifies if the battery can recharge in buck mode even on a bike. Make sure it is IMPOSSIBLE to have an accessory output before setting this to 1. 0: Disallow, 1: Allow."
+battery,0x50,0x58,config,diag,0x46,,,,,,,,,,enum,,,,,,,,,,,,,
+battery,0x50,0x58,config,type,0x3d,,,,,5.000000,,,,,enum,,,,,,,,,1,,,,
+battery,0x50,0x58,config,vbattNominal,0x50,,,,,5.000000,,,,,scalar,,,,,,,,,1,,,,
+battery,0x50,0x58,config,accessoryMounted,0x44,,,,,0.5,,,,,enum,,,,,,,,,,,,,
+battery,0x50,0x58,config,accessoryEnabled,0x22,,,,,,,,,,enum,,,,,,,,,,,,,
+battery,0x50,0x58,config,accessoryVoltage,0x28,,,,,,,,,,scalar,,6,6,V,,,,yes,1,,,rev.hw enum 52,
+battery,0x50,0x58,config,accessoryVoltage,0x28,,,,,,,,,,scalar,,0.1,,V,,,,yes,1,,rev.hw enum 60,,
+battery,0x50,0x58,config,ilmd,0xb9,,,,,0.1,,,,,scalar,,0.54835,,Ah,,,,,1,,,,
+battery,0x50,0x58,config,maxCharge,0xf9 0xfa,,,,,,,,,,scalar,,0.001,,A,,,,,1,,rev.sw count 80,,Maximum regen. current on vPower
+battery,0x50,0x58,config,maxDischarge,0xfb 0xfc,,,,,,,,,,scalar,,0.001,,A,,,,,1,,rev.sw count 80,,Maximum drawn current on vPower
+battery,0x50,0x58,config,cellCapacity,,0xfd 0xfe,,,,,,,,,scalar,,0.001,,Ah,,,,,1,,rev.sw count 80,,
+battery,0x50,0x58,config,packSerial,0xae,,,,,,,,,,count,,,,,,,,,1,,rev.sw count 80,,
+battery,0x50,0x58,config,packParallel,,0xaf,,,,,,,,,count,,,,,,,,,1,,rev.sw count 80,,
+battery,0x50,0x58,config,nac,0xe5 0xe6,0xdb 0xdc,,,,,,,,,count,,,,,,,,,1,,,,
+battery,0x50,0x58,config,forceDone,0x47,,,,,,,,,,count,,,,,,,,,,yes,,,Setting this register to 0x45 will force SOC to 100%
+battery,0x50,0x58,config,shutdown,0x25,,,,,,,,,,enum,,,,,,,,,,,,,
+battery,0x50,0x58,config,vPower,0x21,,,,,,,,,,enum,,,,,,,,,,,,,
+battery,0x50,0x58,config,vControl,0x26,,,,,,,,,,enum,,,,,,,,,,yes,,,Enable/Disable vControl
+battery,0x50,0x58,config,vBattInt,0x45,,,,,,,,,,enum,,,,,,,,,,yes,,,Enable/Disable vBattInt
+battery,0x50,0x58,config,capsenseMode,0x29,,,,,,,,,,enum,,,,,,,,yes,1,,,,"Controls the mode of operation of the SoC level indicator. 0: Inactive, 1: Touch detect when the battery is OFF, 2: Touch detect when OFF and SoC indication when battery is ON. 3: red and blue colors . 4: 5levels SoC."
+battery,0x50,0x58,config,_chargerCalibrationSourceFlags,0xa00b,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,,rev.hw enum 60,,"Controls charger calibration values source. 0xFF:Autocalibration value, Bit0 set:Voltage calibration value from EEPROM, Bit1 set:Current calibration from EEPROM"
+battery,0x50,0x58,config,_chargerVoltageCalibrationValue,0xa007 0xa008,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,,rev.hw enum 60,,Contains voltage calibration value of the charger. This value is written at each charge if bit 0 of _chargerCalibrationSourceFlags is set.
+battery,0x50,0x58,config,_chargerCurrentCalibrationValue,0xa009 0xa00a,,bridges.i2cRegAddr,bridges.i2cRegData,,,,,,,count,,,,,,,,,,,rev.hw enum 60,,Contains current calibration value of the charger. This value is written at each charge if bit 1 of _chargerCalibrationSourceFlags is set.
+battery,0x50,0x58,config,slaConstantA,0x15,,,,,,,,,,scalar,,,,,,,,yes,1,,,rev.hw enum 52,Boat related (SOC estimator)
+battery,0x50,0x58,config,slaConstantB,0x16,,,,,,,,,,scalar,,,,,,,,yes,1,,,rev.hw enum 52,Boat related (SOC estimator)
+battery,0x50,0x58,config,slaConstantC,0x17,,,,,,,,,,scalar,,,,,,,,yes,1,,,rev.hw enum 52,Boat related (SOC estimator)
+battery,0x50,0x58,config,slaConstantD,0x19,,,,,,,,,,scalar,,,,,,,,yes,1,,,rev.sw count 108 rev.hw enum 52,Boat related (SOC estimator)
+battery,0x50,0x58,config,slaConstantD,0x13,,,,,,,,,,scalar,,,,,,,,yes,1,,rev.sw count 109,rev.hw enum 52,Boat related (SOC estimator)
+battery,0x50,0x58,protect,unlock,0x71,,,,,,,,,,scalar,,,,,,,,,,,,,
+battery,0x50,0x58,protect,mode,0xe7,,,,,0.1,,,,,count,,,,,,,,,1,,,,
+battery,0x50,0x58,protect,ctrl,0xe8,,,,,5.5,,,,,count,,,,,,,,,1,,,,
+motor,0x60,0x58,rev,sw,,0x20,,,,,,,,,count,,,,,,,,,,,,,
+motor,0x60,0x58,rev,hw,,0x19,,,,,,,,,enum,,,,,,,,,,,,,
+motor,0x60,0x58,rev,sub,,0x22,,,,,,,,,count,,,,,,,,,,,,,
+motor,0x60,0x58,sn,pn,0x62 0x63,,,,,,,,,,count,,,,,,,,yes,1,,,,
+motor,0x60,0x58,sn,location,0x6b,,,,,,,,,,string,1,,,,,,,yes,1,,rev.sw count 77,,
+motor,0x60,0x58,sn,year,0x64,,,,,,,,,,count,,,,,,,,yes,1,,,,
+motor,0x60,0x58,sn,month,0x65,,,,,,,,,,count,,,,,,,,yes,1,,,,
+motor,0x60,0x58,sn,day,0x66,,,,,,,,,,count,,,,,,,,yes,1,,,,
+motor,0x60,0x58,sn,item,0x60 0x61,,,,,,,,,,count,,,,,,,,yes,1,,,,
+motor,0x60,0x58,sn,oem,0x67 0x68,,,,,,,,,,enum,,,,,,,,yes,1,,rev.sw count 77,,
+motor,0x60,0x58,sn,product,0x69 0x6a,,,,,,,,,,enum,,,,,,,,yes,1,,rev.sw count 77,,
+motor,0x60,0x58,sn,statorType,0x43,,,,,,,,,,enum,,,,,,,,yes,1,,,,
+motor,0x60,0x58,protect,unlock,0xa5,,,,,,,,,,enum,,,,,,,,,,,,,
+motor,0x60,0x58,geometry,circ,0x44 0x45,,,,,,,,,,scalar,,,,mm,,,,yes,1,,,,
+motor,0x60,0x58,assist,level,0x09,,,,,,,,,,scalar,,1.5625,,%,yes,-100,100,,,,,,
+motor,0x60,0x58,assist,levelOffSlope,0xd0 0xd1,,,,,,,,,,scalar,,3.05,,%/s,,,,yes,1,,rev.sw count 97,,Speed at which the assist level set in the motor decreases when the console stops sending requests (when it is removed for example).
+motor,0x60,0x58,assist,direction,0x42,,,,,,,,,,enum,,,,,,0,1,,,,,,
+motor,0x60,0x58,assist,maxSpeed,0x8b,,,,,,,,,,scalar,,,,km/h,,,,yes,1,,rev.sw count 76,,
+motor,0x60,0x58,assist,maxSpeedDerateDelta,0xd3,,,,,,,,,,scalar,,9.091,,rpm,,,,yes,1,,rev.sw count 97,,Speed before maxSpeed to start derating.
+motor,0x60,0x58,assist,vqDynamicFlag,0x8c,,,,,,,,,,enum,,,,,,0,1,yes,2,,rev.sw count 77,,
+motor,0x60,0x58,assist,statorPn,0x6d 0x6e,,,,,,,,,,enum,,,,,,,,,1,,rev.sw count 90,,
+motor,0x60,0x58,assist,regenInflex,0xd2,,,,,,,,,,scalar,,9.091,,rpm,,5,,yes,1,,rev.sw count 97,,Speed from which regen is not attenuated.
+motor,0x60,0x58,assist,walkSpeedDecreaseStart,0x0b,,,,,,,,,,scalar,,0.1,,km/h,,,,yes,1,,rev.sw count 99,,"Speed from which the motor starts diminishing its assistance when using the ""walk mode""."
+motor,0x60,0x58,assist,walkSpeedDecreaseEnd,0x0c,,,,,,,,,,scalar,,0.1,,km/h,,,,yes,1,,rev.sw count 99,,"Speed at which the motor gives no more assistance when using the ""walk mode""."
+motor,0x60,0x58,assist,walkMaxLevel,0x0d,,,,,,,,,,scalar,,1.5625,,%,,,,yes,1,,rev.sw count 99,,Top level when assisting in walk mode.
+motor,0x60,0x58,assist,walkLevel,0x0a,,,,,,,,,,scalar,,1.5625,,%,,,,,,,rev.sw count 99,,Top level when assisting in walk mode.
+motor,0x60,0x58,assist,lowSpeedRampFlag,0x40,,,,,,,,,,enum,,,,,,,,yes,1,,rev.sw count 98,,Enables a lower speed ramp. 0: Ramp disabled; 1: Ramp enabled.
+motor,0x60,0x58,torque,gaugePolarity,0x46,,,,,,,,,,enum,,,,,,,,yes,1,,,,
+motor,0x60,0x58,torque,gaugeType,0x6c,,,,,,,,,,enum,,,,,,,,yes,1,,rev.sw count 77,,
+motor,0x60,0x58,torque,gaugeValue,,0x21,,,,,,,,,scalar,,1.5625,,%,,0,100,,,yes,rev.sw count 77,,
+motor,0x60,0x58,torque,gaugeVoltage,,0xc9 0xca,,,,,,,,,scalar,,-0.000076295,5,V,,0,5,,,yes,rev.sw count 77,,
+motor,0x60,0x58,torque,gaugeNoise,0xc4 0xc5,,,,,,,,,,scalar,,0.0015259,,%,,0,100,yes,1,,rev.sw count 81,,
+motor,0x60,0x58,torque,gaugeDelay,0xc6 0xc7,,,,,,,,,,scalar,,0.001,,s,,0,,yes,1,,rev.sw count 81,,
+motor,0x60,0x58,torque,gaugeSpeed,0xc8,,,,,,,,,,scalar,,9.091,,rpm,,0,,yes,1,,rev.sw count 81,,
+motor,0x60,0x58,torque,gaugeReference,0xcb 0xcc,,,,,,,,,,scalar,,-0.000076295,5,V,,0,5,,1,yes,rev.sw count 81,,
+motor,0x60,0x58,torque,gaugeGain,0xce,,,,,,,,,,scalar,,1.5625,,%,,0,398,yes,1,,rev.sw count 90,,
+motor,0x60,0x58,torque,gaugeMaxVoltage,0xe0,,,,,,,,,,scalar,,0.019608,,V,,0,5,yes,1,,rev.sw count 98 rev.sub count 2,,"Maximum voltage allowed for the sensor. When the sensor detect a voltage over this value for motor.torque.gaugeMaxVoltageDelay, it assumes an electrical failure and cuts assistance."
+motor,0x60,0x58,torque,gaugeMaxVoltageDelay,0xe1,,,,,,,,,,scalar,,0.1,,s,,0,25.5,yes,1,,rev.sw count 98 rev.sub count 2,,"Time after which a voltage over motor.torque.gaugeMaxVoltage is assumed to be an electrical failure, cutting assistance."
+motor,0x60,0x58,preference,region,0x8a,,,,,,,,,,enum,,,,,,,,yes,1,,rev.sw count 76,,
+motor,0x60,0x58,config,commMode,0x36,,,,,,,,,,enum,,,,,,,,,1,,,rev.sw count 82,
+motor,0x60,0x58,config,commMode,0xcd 0x36,,,,,,,,,,enum,,,,,,,,,1,,rev.sw count 83,,Sets the communication mode. 0 for CAN and 0xca01 for I2C.
+motor,0x60,0x58,config,enablePwmLimit,0x8d,,,,,,,,,,enum,,,,,,,,yes,1,,rev.sw count 96,,.
+motor,0x60,0x58,status,main,0x47,,,,,,,,,,enum,,,,,,,,,,yes,rev.sw count 93,,"Indicates the current main status of the motor. 0-Running, 1-NoCommand, 2-Startup, 3-I2CShutOff, 4-AntiBackwardShort, 5-AlarmRegen, 6-AlarmShort, 7-OverSpeedI, 8-OverSpeedV, 9-V12UVP, 10-V12OVP, 11-VPwrUVP, 12-VPwrOVP, 13-OCProtect, 14-BadStatorPN, 15-HallError."
+motor,0x60,0x58,status,codes,,0x92,,,,,,,,,enum,,,,,,,,,,yes,rev.sw count 96,,Indicates conditions currently detected by motor. Bit 0-Sensor saturation.
+motor,0x60,0x58,status,codesLatch,,0x93,,,,,,,,,enum,,,,,,,,,,yes,rev.sw count 96,,Indicates conditions detected by motor since its last power up. See bit description of status.codes
+motor,0x60,0x58,status,speed,,0x11,,,,,,,,,scalar,,9.091,,rpm,,,,,,yes,,,
+motor,0x60,0x58,status,powerMeter,,0x14,,,,,,,,,scalar,,1.5625,,%,,,,,,yes,,,
+motor,0x60,0x58,status,temp,,0x16,,,,,,,,,scalar,,,,C,,,,,,yes,,,
+motor,0x60,0x58,status,vPower,,0x70 0x71,,,,,,,,,scalar,,0.001,,V,,,,,,yes,,,
+motor,0x60,0x58,status,v12V,,0x72 0x73,,,,,,,,,scalar,,0.001,,V,,,,,,yes,,,
+motor,0x60,0x58,status,v5V,,0x74 0x75,,,,,,,,,scalar,,0.001,,V,,,,,,yes,,,
+motor,0x60,0x58,stats,maxVpower,0x80 0x81,,,,,,,,,,scalar,,0.001,,V,,,,yes,1,yes,rev.sw count 83,,
+motor,0x60,0x58,stats,maxVtemp,0x82 0x83,,,,,,,,,,scalar,,,,,,,,yes,1,yes,rev.sw count 83,,
+motor,0x60,0x58,stats,odo,0x84 0x85,,,,,,,,,,scalar,,,,km,,,,yes,1,yes,rev.sw count 83,,
+motor,0x60,0x58,stats,chronoHr,0x86 0x87,,,,,,,,,,count,,,,,,,,yes,1,yes,rev.sw count 83,,
+motor,0x60,0x58,stats,chronoSec,0x88 0x89,,,,,,,,,,count,,,,,,,,yes,1,yes,rev.sw count 83,,
+motor,0x60,0x58,stats,hallDchs,0xb0 0xb1,,,,,,,,,,count,,,,,,,,yes,1,yes,rev.sw count 96,,
+motor,0x60,0x58,stats,hallTrans,0xb2 0xb3,,,,,,,,,,count,,,,,,,,yes,1,yes,rev.sw count 96,,
+motor,0x60,0x58,stats,hallRing,0xb4 0xb5,,,,,,,,,,count,,,,,,,,yes,1,yes,rev.sw count 96,,
+motor,0x60,0x58,stats,hallLost,0xb6 0xb7,,,,,,,,,,count,,,,,,,,yes,1,yes,rev.sw count 96,,
+sensor,0x68,0x58,rev,sw,,0x81,,,,,,,,,count,,,,,,,,,,,,,
+sensor,0x68,0x58,rev,hw,,0x80,,,,,,,,,enum,,,,,,,,,,,,,
+sensor,0x68,0x58,rev,sub,,0x83,,,,,,,,,count,,,,,,,,,,,rev.sw count 15,,
+sensor,0x68,0x58,sn,pn,0x75 0x76,,,,,,,,,,count,,,,,,,,yes,,,,,
+sensor,0x68,0x58,sn,location,0x71,,,,,,,,,,string,1,,,,,,,yes,,,,,
+sensor,0x68,0x58,sn,year,0x72,,,,,,,,,,count,,,,,,,,yes,,,,,
+sensor,0x68,0x58,sn,month,0x73,,,,,,,,,,count,,,,,,,,yes,,,,,
+sensor,0x68,0x58,sn,day,0x74,,,,,,,,,,count,,,,,,,,yes,,,,,
+sensor,0x68,0x58,sn,item,0x77 0x78,,,,,,,,,,count,,,,,,,,yes,,,,,
+sensor,0x68,0x58,config,mode,0x82,,,,,,,,,,enum,,,,,,,,yes,,,,,"0-Thune, 1-Fag."
+sensor,0x68,0x58,config,gaugeGain,0x10 0x11,,,,,,,,,,scalar,,0.00390625,,,,,,yes,,,rev.sw count 12,,
+sensor,0x68,0x58,config,rampUpSteps,0x12 0x13,,,,,,,,,,count,,,,,,,,yes,,,rev.sw count 12,,
+sensor,0x68,0x58,config,decayDelay,0x14 0x15,,,,,,,,,,count,,,,,,,,yes,,,rev.sw count 12,,
+sensor,0x68,0x58,config,decaySteps,0x16 0x17,,,,,,,,,,count,,,,,,,,yes,,,rev.sw count 12,,
+sensor,0x68,0x58,config,speedThreshold,0x18 0x19,,,,,,,,,,scalar,,9.091,,rpm,,,,yes,,,rev.sw count 12,,
+sensor,0x68,0x58,config,rampActiveOverThreshold,0x1a,,,,,,,,,,enum,,,,,,,,yes,,,rev.sw count 12,,
+sensor,0x68,0x58,config,inputOffset,0x40,,,,,,,,,,scalar,,0.012890625,,V,yes,,,yes,,,rev.sw count 16,,Permit to offset the input value of the torque sensor from +1.64 to -1.65V
+sensor,0x68,0x58,status,vTorque,0x1b,,,,,,,,,,scalar,,0.012941,,V,,,,,,yes,rev.sw count 15,,Torque sensor voltage.
+sensor,0x68,0x58,status,cadence,0x1c,,,,,,,,,,scalar,,18.75,,rpm,,,,,,yes,rev.sw count 15 config.mode enum 0,config.mode enum 0,Number of turns per minutes made with the pedals.
+sensor,0x68,0x58,status,cadence,0x1c,,,,,,,,,,scalar,,8.3333,,rpm,,,,,,yes,rev.sw count 15 config.mode enum 1,config.mode enum 1,Number of turns per minutes made with the pedals.
+sensor,0x68,0x58,status,vOutput,0x1d,,,,,,,,,,scalar,,0.012941,,V,,,,,,yes,rev.sw count 15,,Voltage output to the motor's gauge sensor.
+sensor,0x68,0x58,status,pulseCounter,0x1e,,,,,,,,,,count,,,,,,,,,,yes,rev.sw count 15,,Pulse counter. Increases when back pedaling and decreases when forward pedaling.
